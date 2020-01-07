@@ -45,7 +45,7 @@ return [
 
         'mysql' => [
             'driver' => 'mysql',
-            'url' => env('DATABASE_URL'),
+            'url' => env('http://www.phpmyadmin.co/db_structure.php?server=1&db=sql2318110'),
             'host' => env('DB_HOST', 'sql2.freesqldatabase.com'),
             'port' => env('DB_PORT', '3306'),
             'database' => env('DB_DATABASE', 'sql2318110'),
