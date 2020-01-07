@@ -30,10 +30,10 @@
                         <h1><a href="#">shefaa<span>Pharmacy<img alt='image not found' src="../../../../images/cashier/logo.jpg"></span></a></h1>
                 
                         <nav>
-                            <a href="http://https://pharmacy-20.herokuapp.com//" class="selected" >search</a>
-                            <a href="http://https://pharmacy-20.herokuapp.com//buy"  >Buy</a>
+                            <a href="/" class="selected" >search</a>
+                            <a href="/buy"  >Buy</a>
                             <a href="/retrieve" >Retrieve</a>
-                            <a href="http://https://pharmacy-20.herokuapp.com/cashier/logout" >Logout</a>
+                            <a href="/cashier/logout" >Logout</a>
                         </nav>
                     </div>
                 

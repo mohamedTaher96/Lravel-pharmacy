@@ -14,8 +14,9 @@ class cashierController extends Controller
 {
     public function cashierLogin()
     {
-        $branches = DB::table('branches')->get();
-        return view('cashier/login')->with(['branchs'=>$branches]);
+        // $branches = DB::table('branches')->get();
+        // return view('cashier/login')->with(['branchs'=>$branches]);
+        return view('cashier/login');
     }
     public function cashierLogout()
     {
