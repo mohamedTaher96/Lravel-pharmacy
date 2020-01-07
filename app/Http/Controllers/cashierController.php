@@ -47,11 +47,14 @@ class cashierController extends Controller
     }
     public function home()
     {
+        
         session_start();
         if(!isset($_SESSION['cashier']))
         {
             return redirect('cashier/login')->with(['access'=>'true']);
         }
+        return view('cashier/home');
+
     }
     public function search(Request $request)
     {
