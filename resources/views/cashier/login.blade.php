@@ -41,9 +41,9 @@
           <div class="form-group">
               <label for="exampleFormControlSelect1">Branchs</label>
               <select class="form-control" name="branch" id="exampleFormControlSelect1">
-                {{-- @foreach ($branchs as $branch)
+                @foreach ($branchs as $branch)
                   <option value="{{$branch->id}}">{{$branch->name}}</option>
-                @endforeach   --}}
+                @endforeach  
               </select>
             </div>
               <button type="submit" class="btn btn-primary btn-block btn-flat">Sign In</button>

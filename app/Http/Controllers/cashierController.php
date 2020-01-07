@@ -14,9 +14,9 @@ class cashierController extends Controller
 {
     public function cashierLogin()
     {
-        // $branches = DB::table('branches')->get();
-        // return view('cashier/login')->with(['branchs'=>$branches]);
-        return view('cashier/login');
+        $branches = DB::table('branches')->get();
+        return view('cashier/login')->with(['branchs'=>$branches]);
+
     }
     public function cashierLogout()
     {
@@ -47,12 +47,11 @@ class cashierController extends Controller
     }
     public function home()
     {
-        // session_start();
-        // if(!isset($_SESSION['cashier']))
-        // {
-        //     return redirect('cashier/login')->with(['access'=>'true']);
-        // }
-        return view('cashier/home');
+        session_start();
+        if(!isset($_SESSION['cashier']))
+        {
+            return redirect('cashier/login')->with(['access'=>'true']);
+        }
     }
     public function search(Request $request)
     {
