@@ -923,8 +923,8 @@ class adminController extends Controller
                 <td><a >$item->expiration</a></td>
     
                 <td>
-                    <a href=\"admin/medicine/item/edit?id=$item->id&medicine_id=$request->id\" class='btn btn-primary' role='button'>edit</a>
-                    <a href=\"admin/medicine/item/delete?id=$item->id&medicine_id=$request->id\" class='btn btn-primary' role='button' onclick= 'return confirm(\"All related to the packet will be deleted \\n are you sure you want to delete the packet ? \")');'>delete</a>
+                    <a href=\"item/edit?id=$item->id&medicine_id=$request->id\" class='btn btn-primary' role='button'>edit</a>
+                    <a href=\"item/delete?id=$item->id&medicine_id=$request->id\" class='btn btn-primary' role='button' onclick= 'return confirm(\"All related to the packet will be deleted \\n are you sure you want to delete the packet ? \")');'>delete</a>
                 </td>
             </tr>
                 ";
@@ -974,7 +974,7 @@ class adminController extends Controller
             $item->stripe = $medicineStripe;
     
             $item->save();
-            return redirect("medicine/items?id=$request->id")->with(['add'=>'true']);
+            return redirect("admin/medicine/items?id=$request->id")->with(['add'=>'true']);
         }else
         {
             return redirect('admin/login')->with(['access'=>'true']);
