@@ -62,7 +62,7 @@
         <div class="box">
                 <div class="box-header">
                     <h3 class="box-title">  Company : </h3><span class="item"> {{$source->name}}</span><br><br>
-                    <a href="http://localhost:8000/admin/company/bill/new?id={{$source->id}}" role="button" class="btn btn-primary" >Add Bill </a>
+                    <a href=" /admin/company/bill/new?id={{$source->id}}" role="button" class="btn btn-primary" >Add Bill </a>
                 </div><!-- /.box-header -->
                 <div class="box-body">
                         <input type="month" name="date" id="month">

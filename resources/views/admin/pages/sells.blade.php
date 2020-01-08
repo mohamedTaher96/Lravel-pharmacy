@@ -38,7 +38,7 @@
 <section class="content">
         <div class="box">
                 <div class="box-header">
-                  {{-- <a href="http://localhost:8000/admin/medicine/new/" role="button" class="btn btn-primary" > Add Category</a> --}}
+                  {{-- <a href=" /admin/medicine/new/" role="button" class="btn btn-primary" > Add Category</a> --}}
                 </div><!-- /.box-header -->
                 <div class="box-body table-responsive">
                   <table id="example1" class="table table-bordered table-striped">

@@ -45,7 +45,7 @@
         <div class="box">
                 <div class="box-header">
                   <h3 class="box-title">  Category : </h3><span class="item"> {{$medicine->name}}</span> <br><br>
-                  <a href="http://localhost:8000/admin/medicine/item/new?id={{$id}}" role="button" class="btn btn-primary" >Add Packet </a>
+                  <a href=" /admin/medicine/item/new?id={{$id}}" role="button" class="btn btn-primary" >Add Packet </a>
                 </div><!-- /.box-header -->
                 <div class="box-body table-responsive">
                   <table id="example1" class="table table-bordered table-striped">

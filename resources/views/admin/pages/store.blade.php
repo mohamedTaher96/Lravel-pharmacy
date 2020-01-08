@@ -38,7 +38,7 @@
 <section class="">
         <div class="box">
                 <div class="box-header">
-                  <a href="http://localhost:8000/admin/store/new/" role="button" class="btn btn-primary" > Add Store</a>
+                  <a href=" /admin/store/new/" role="button" class="btn btn-primary" > Add Store</a>
                 </div><!-- /.box-header -->
                 <div class="box-body table-responsive">
                   <table id="example1" class="table table-bordered table-striped">
@@ -55,13 +55,13 @@
                         @foreach ($stores as $store)
                             <tr>
                                 <td> {{$store->name}}</td>
-                                <td><a href="http://localhost:8000/admin/store/medicine?id={{$store->id}}"  class="btn btn-primary" role="button">Medicines</a></td>
-                                <td><a href="http://localhost:8000/admin/store/makeup?id={{$store->id}}"  class="btn btn-primary" role="button">Mackup</a></td>
-                                <td><a href="http://localhost:8000/admin/store/bills?id={{$store->id}}" class="btn btn-primary" role="button">Bills</a></td>
+                                <td><a href=" /admin/store/medicine?id={{$store->id}}"  class="btn btn-primary" role="button">Medicines</a></td>
+                                <td><a href=" /admin/store/makeup?id={{$store->id}}"  class="btn btn-primary" role="button">Mackup</a></td>
+                                <td><a href=" /admin/store/bills?id={{$store->id}}" class="btn btn-primary" role="button">Bills</a></td>
     
                                 <td>
-                                    <a href="http://localhost:8000/admin/store/edit?id={{$store->id}}" class="btn btn-primary" role="button">Edit</a>
-                                    <a href="http://localhost:8000/admin/store/delete?id={{$store->id}}" class="btn btn-primary" role="button" onclick="return confirm(  ' All related to the packet will be deleted \n are you sure you want to delete the packet ?   '  );">Delete</a>
+                                    <a href=" /admin/store/edit?id={{$store->id}}" class="btn btn-primary" role="button">Edit</a>
+                                    <a href=" /admin/store/delete?id={{$store->id}}" class="btn btn-primary" role="button" onclick="return confirm(  ' All related to the packet will be deleted \n are you sure you want to delete the packet ?   '  );">Delete</a>
                                 </td>
                             </tr>
                         @endforeach

@@ -38,7 +38,7 @@
 <section class="content">
         <div class="box">
                 <div class="box-header">
-                  <a href="http://localhost:8000/admin/company/new/" role="button" class="btn btn-primary" >Add Company </a>
+                  <a href=" /admin/company/new/" role="button" class="btn btn-primary" >Add Company </a>
                 </div><!-- /.box-header -->
                 <div class="box-body table-responsive">
                   <table id="example1" class="table table-bordered table-striped ">
@@ -55,13 +55,13 @@
                         @foreach ($companies as $company)
                             <tr>
                                 <td> {{$company->name}}</td>
-                                <td><a href="http://localhost:8000/admin/company/medicine?id={{$company->id}}"  class="btn btn-primary" role="button">medicines</a></td>
-                                <td><a href="http://localhost:8000/admin/company/makeup?id={{$company->id}}"  class="btn btn-primary" role="button">makeup</a></td>
-                                <td><a href="http://localhost:8000/admin/company/bills?id={{$company->id}}" class="btn btn-primary" role="button">bills</a></td>
+                                <td><a href=" /admin/company/medicine?id={{$company->id}}"  class="btn btn-primary" role="button">medicines</a></td>
+                                <td><a href=" /admin/company/makeup?id={{$company->id}}"  class="btn btn-primary" role="button">makeup</a></td>
+                                <td><a href=" /admin/company/bills?id={{$company->id}}" class="btn btn-primary" role="button">bills</a></td>
     
                                 <td>
-                                    <a href="http://localhost:8000/admin/company/edit?id={{$company->id}}" class="btn btn-primary" role="button">edit</a>
-                                    <a href="http://localhost:8000/admin/company/delete?id={{$company->id}}" class="btn btn-primary" role="button" onclick="return confirm(  ' All related to the company will be deleted \n are you sure you want to delete the company ?   '  );">delete</a>
+                                    <a href=" /admin/company/edit?id={{$company->id}}" class="btn btn-primary" role="button">edit</a>
+                                    <a href=" /admin/company/delete?id={{$company->id}}" class="btn btn-primary" role="button" onclick="return confirm(  ' All related to the company will be deleted \n are you sure you want to delete the company ?   '  );">delete</a>
                                 </td>
                             </tr>
                         @endforeach

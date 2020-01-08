@@ -33,7 +33,7 @@
               <div class="icon">
                 <i class="   "></i>
               </div>
-              <a href="http://localhost:8000/admin/company/" class="small-box-footer"> Edit <i class="fa fa-arrow-circle-left"></i></a>
+              <a href=" /admin/company/" class="small-box-footer"> Edit <i class="fa fa-arrow-circle-left"></i></a>
             </div>
           </div><!-- ./col -->
           <div class="col-lg-3 col-sm-4 col-xs-6">
@@ -52,7 +52,7 @@
                 <div class="icon">
                   <i class="   "></i>
                 </div>
-                <a href="http://localhost:8000/admin/store/" class="small-box-footer"> Edit <i class="fa fa-arrow-circle-left"></i></a>
+                <a href=" /admin/store/" class="small-box-footer"> Edit <i class="fa fa-arrow-circle-left"></i></a>
               </div>
             </div><!-- ./col -->
 
@@ -74,7 +74,7 @@
                 <div class="icon">
                   <i class=""></i>
                 </div>
-                <a href="http://localhost:8000/admin/medicine/" class="small-box-footer"> Edit <i class="fa fa-arrow-circle-left"></i></a>
+                <a href=" /admin/medicine/" class="small-box-footer"> Edit <i class="fa fa-arrow-circle-left"></i></a>
               </div>
             </div><!-- ./col -->
 
@@ -90,7 +90,7 @@
                     <div class="icon">
                       <i class=""></i>
                     </div>
-                    <a href="http://localhost:8000/admin/makeup/" class="small-box-footer"> Edit <i class="fa fa-arrow-circle-left"></i></a>
+                    <a href=" /admin/makeup/" class="small-box-footer"> Edit <i class="fa fa-arrow-circle-left"></i></a>
                   </div>
                 </div><!-- ./col -->
         </div><!-- /.row -->
