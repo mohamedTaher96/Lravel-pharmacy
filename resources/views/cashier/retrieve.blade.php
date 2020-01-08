@@ -36,10 +36,10 @@
                         <h1><a href="#">Shefaa<span>Pharmacy<img alt='image not found' src="../../../../images/cashier/logo.jpg"></span></a></h1>
                 
                         <nav>
-                            <a href="http://localhost:8000/" >search</a>
-                            <a href="http://localhost:8000/buy"  >Buy</a>
-                            <a href="http://localhost:8000/retrieve" class="selected" >Retrieve</a>
-                            <a href="http://localhost:8000/cashier/logout" >Logout</a>
+                            <a href=" /" >search</a>
+                            <a href=" /buy"  >Buy</a>
+                            <a href=" /retrieve" class="selected" >Retrieve</a>
+                            <a href=" /cashier/logout" >Logout</a>
                         </nav>
                     </div>
                 

@@ -152,9 +152,9 @@ td{
   </div><!--End Invoice-->
 <script>
     window.print();
-    setTimeout(function () { document.location.href = "http://localhost:8000/buy";; }, 100);
-    // document.location.href = "http://localhost:8000/buy"; 
-    // window.location.assign('http://localhost:8000/buy');
+    setTimeout(function () { document.location.href = " /buy";; }, 100);
+    // document.location.href = " /buy"; 
+    // window.location.assign(' /buy');
 </script>
 </body>
 </html>
