@@ -744,7 +744,7 @@ class adminController extends Controller
                 $html.="
                 <tr>
                 <td>  $medicine->name </td>
-                <td><a href=\"admin/medicine/material?material= $medicine->material \"  class='btn btn-primary' role='button'> $medicine->material </a></td>
+                <td><a href=\"material?material= $medicine->material \"  class='btn btn-primary' role='button'> $medicine->material </a></td>
                 <td><a href=\"medicine/items?id= $medicine->id \"  class='btn btn-primary' role='button'> $packetNo</a></td>
                 <td><a> $medicine->stripe</a></td>
                 <td><a > $medicine->cost </a></td>
@@ -1001,7 +1001,7 @@ class adminController extends Controller
         if(isset($_SESSION['admin']))
         {
             DB::table('items')->where('id',$request->id)->update(['code'=>$request->code,'source_id'=>$request->source_id,'expiration'=>$request->expired,'precentage'=>$request->precentage]);
-            return redirect("medicine/items?id=$request->medicine_id")->with(['edit'=>'true']);
+            return redirect("admin/medicine/items?id=$request->medicine_id")->with(['edit'=>'true']);
         }else
         {
             return redirect('admin/login')->with(['access'=>'true']);
@@ -1015,7 +1015,7 @@ class adminController extends Controller
         {
             $item = DB::table('items')->where('id',$request->id);
             $item->delete();
-            return redirect("medicine/items?id=$request->medicine_id")->with(['delete'=>'true']);
+            return redirect("admin/medicine/items?id=$request->medicine_id")->with(['delete'=>'true']);
         }else
         {
             return redirect('admin/login')->with(['access'=>'true']);
@@ -1038,12 +1038,12 @@ class adminController extends Controller
                 $html.="
                 <tr>
                 <td>  $makeup->name </td>
-                <td><a href=\"admin/makeup/items?id= $makeup->id \"  class='btn btn-primary' role='button'> $packetNo</a></td>
+                <td><a href=\"makeup/items?id= $makeup->id \"  class='btn btn-primary' role='button'> $packetNo</a></td>
                 <td><a > $makeup->cost </a></td>
     
                 <td>
-                    <a href=\"admin/makeup/edit?id= $makeup->id \" class='btn btn-primary' role='button'>edit</a>
-                    <a href=\"admin/makeup/delete?id= $makeup->id \" class='btn btn-primary' role='button'  onclick=\"return confirm(  ' All related to the category will be deleted \\n are you sure you want to delete the category ?   '  );\">delete</a>
+                    <a href=\"makeup/edit?id= $makeup->id \" class='btn btn-primary' role='button'>edit</a>
+                    <a href=\"makeup/delete?id= $makeup->id \" class='btn btn-primary' role='button'  onclick=\"return confirm(  ' All related to the category will be deleted \\n are you sure you want to delete the category ?   '  );\">delete</a>
                 </td>
             </tr>
                 ";
@@ -1326,7 +1326,7 @@ class adminController extends Controller
                 $html .= "
                     <tr>
                         <td><a>$bill->created_at</a></td>
-                        <td><a href=\"admin/sells/items?id=$bill->id\" class='btn btn-primary' role='button'>$sellNo</a></td>
+                        <td><a href=\"sells/items?id=$bill->id\" class='btn btn-primary' role='button'>$sellNo</a></td>
                         <td><a>$bill->total</a></td>
                     </tr>
                 ";
