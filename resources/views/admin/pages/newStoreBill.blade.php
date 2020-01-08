@@ -23,7 +23,7 @@
                       <h2 class="box-title">new Store Bill   </h2>
                     </div><!-- /.box-header -->
                     <!-- form start -->
-                    <form action="add" method="POST" enctype="multipart/form-data">
+                    <form action="new/add" method="POST" enctype="multipart/form-data">
                         @csrf
                       <div class="box-body">
                         <div class="form-group">

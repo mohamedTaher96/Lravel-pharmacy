@@ -172,7 +172,7 @@ class adminController extends Controller
                     $html .= "
                     <tr>
                     <td> $medicine->name</td>
-                    <td><a href=\"http://localhost:8000/admin/company/medicines/items?id=$request->id&medicine_id=$medicine->id\" class='btn btn-primary' role='button'> $packetNo </a></td>
+                    <td><a href=\"admin/company/medicines/items?id=$request->id&medicine_id=$medicine->id\" class='btn btn-primary' role='button'> $packetNo </a></td>
                     <td><a>$medicine->material</a> </td>
                     <td><a>$medicine->cost</a></td>
                 </tr>
@@ -235,7 +235,7 @@ class adminController extends Controller
                     $html .= "
                     <tr>
                     <td> $makeup->name</td>
-                    <td><a href=\"http://localhost:8000/admin/company/makeup/items?id=$request->id&makeup_id=$makeup->id\" class='btn btn-primary' role='button'> $packetNo </a></td>
+                    <td><a href=\"admin/company/makeup/items?id=$request->id&makeup_id=$makeup->id\" class='btn btn-primary' role='button'> $packetNo </a></td>
                     <td><a>$makeup->cost</a></td>
                 </tr>
                     ";
@@ -351,7 +351,7 @@ class adminController extends Controller
                 $html .="
                 
                     <div class='card col-lg-2 col-sm-4 col-xs-5' >
-                        <a target='_blank' rel='noopener noreferrer' href='http://localhost:8000/images/Bills/".$transaction->src."' >
+                        <a target='_blank' rel='noopener noreferrer' href='images/Bills/".$transaction->src."' >
                             <img class='card-img-top' alt='image not found'src=\"$src_path\">
                         </a>
                         <div clas='card-body'>
@@ -381,7 +381,7 @@ class adminController extends Controller
                 $html .="
                 
                     <div class='card col-lg-2 col-sm-4 col-xs-5' >
-                        <a target='_blank' rel='noopener noreferrer' href='http://localhost:8000/images/Bills/".$transaction->src."' >
+                        <a target='_blank' rel='noopener noreferrer' href='images/Bills/".$transaction->src."' >
                             <img class='card-img-top' alt='image not found'src=\"$src_path\">
                         </a>
                         <div clas='card-body'>
@@ -504,7 +504,7 @@ class adminController extends Controller
                     $html .= "
                     <tr>
                     <td> $medicine->name</td>
-                    <td><a href=\"http://localhost:8000/admin/store/medicines/items?id=$request->id&medicine_id=$medicine->id\" class='btn btn-primary' role='button'> $packetNo </a></td>
+                    <td><a href=\"admin/store/medicines/items?id=$request->id&medicine_id=$medicine->id\" class='btn btn-primary' role='button'> $packetNo </a></td>
                     <td><a>$medicine->material</a> </td>
                     <td><a>$medicine->cost</a></td>
                 </tr>
@@ -567,7 +567,7 @@ class adminController extends Controller
                     $html .= "
                     <tr>
                     <td> $makeup->name</td>
-                    <td><a href=\"http://localhost:8000/admin/store/makeup/items?id=$request->id&makeup_id=$makeup->id\" class='btn btn-primary' role='button'> $packetNo </a></td>
+                    <td><a href=\"admin/store/makeup/items?id=$request->id&makeup_id=$makeup->id\" class='btn btn-primary' role='button'> $packetNo </a></td>
                     <td><a>$makeup->cost</a></td>
                 </tr>
                     ";
@@ -683,7 +683,7 @@ class adminController extends Controller
                 $html .="
                 
                     <div class='card col-lg-2 col-sm-4 col-xs-5' >
-                        <a target='_blank' rel='noopener noreferrer' href='http://localhost:8000/images/Bills/".$transaction->src."' >
+                        <a target='_blank' rel='noopener noreferrer' href='images/Bills/".$transaction->src."' >
                             <img class='card-img-top' alt='image not found'src=\"$src_path\">
                         </a>
                         <div clas='card-body'>
@@ -713,7 +713,7 @@ class adminController extends Controller
                 $html .="
                 
                     <div class='card col-lg-2 col-sm-4 col-xs-5' >
-                        <a target='_blank' rel='noopener noreferrer' href='http://localhost:8000/images/Bills/".$transaction->src."' >
+                        <a target='_blank' rel='noopener noreferrer' href='images/Bills/".$transaction->src."' >
                             <img class='card-img-top' alt='image not found'src=\"$src_path\">
                         </a>
                         <div clas='card-body'>
@@ -744,14 +744,14 @@ class adminController extends Controller
                 $html.="
                 <tr>
                 <td>  $medicine->name </td>
-                <td><a href=\"http://localhost:8000/admin/medicine/material?material= $medicine->material \"  class='btn btn-primary' role='button'> $medicine->material </a></td>
-                <td><a href=\"http://localhost:8000/admin/medicine/items?id= $medicine->id \"  class='btn btn-primary' role='button'> $packetNo</a></td>
+                <td><a href=\"admin/medicine/material?material= $medicine->material \"  class='btn btn-primary' role='button'> $medicine->material </a></td>
+                <td><a href=\"admin/medicine/items?id= $medicine->id \"  class='btn btn-primary' role='button'> $packetNo</a></td>
                 <td><a> $medicine->stripe</a></td>
                 <td><a > $medicine->cost </a></td>
     
                 <td>
-                    <a href=\"http://localhost:8000/admin/medicine/edit?id= $medicine->id \" class='btn btn-primary' role='button'>edit</a>
-                    <a href=\"http://localhost:8000/admin/medicine/delete?id= $medicine->id \" class='btn btn-primary' role='button'  onclick=\"return confirm(  ' All related to the category will be deleted \\n are you sure you want to delete the category ?   '  );\">delete</a>
+                    <a href=\"admin/medicine/edit?id= $medicine->id \" class='btn btn-primary' role='button'>edit</a>
+                    <a href=\"admin/medicine/delete?id= $medicine->id \" class='btn btn-primary' role='button'  onclick=\"return confirm(  ' All related to the category will be deleted \\n are you sure you want to delete the category ?   '  );\">delete</a>
                 </td>
             </tr>
                 ";
@@ -916,15 +916,15 @@ class adminController extends Controller
                 $source_name = DB::table('sources')->where('id',$item->source_id)->first()->name;
                 $html .= "
                 <tr>
-                <td><a href=\"http://localhost:8000/admin/source/medicine?id=$item->source_id\"  class='btn btn-primary' role='button'>$source_name</a></td>
+                <td><a href=\"admin/source/medicine?id=$item->source_id\"  class='btn btn-primary' role='button'>$source_name</a></td>
                 <td> $item->code</td>
                 
                 <td><a >$item->precentage %</a></td>
                 <td><a >$item->expiration</a></td>
     
                 <td>
-                    <a href=\"http://localhost:8000/admin/medicine/item/edit?id=$item->id&medicine_id=$request->id\" class='btn btn-primary' role='button'>edit</a>
-                    <a href=\"http://localhost:8000/admin/medicine/item/delete?id=$item->id&medicine_id=$request->id\" class='btn btn-primary' role='button' onclick= 'return confirm(\"All related to the packet will be deleted \\n are you sure you want to delete the packet ? \")');'>delete</a>
+                    <a href=\"admin/medicine/item/edit?id=$item->id&medicine_id=$request->id\" class='btn btn-primary' role='button'>edit</a>
+                    <a href=\"admin/medicine/item/delete?id=$item->id&medicine_id=$request->id\" class='btn btn-primary' role='button' onclick= 'return confirm(\"All related to the packet will be deleted \\n are you sure you want to delete the packet ? \")');'>delete</a>
                 </td>
             </tr>
                 ";
@@ -1038,12 +1038,12 @@ class adminController extends Controller
                 $html.="
                 <tr>
                 <td>  $makeup->name </td>
-                <td><a href=\"http://localhost:8000/admin/makeup/items?id= $makeup->id \"  class='btn btn-primary' role='button'> $packetNo</a></td>
+                <td><a href=\"admin/makeup/items?id= $makeup->id \"  class='btn btn-primary' role='button'> $packetNo</a></td>
                 <td><a > $makeup->cost </a></td>
     
                 <td>
-                    <a href=\"http://localhost:8000/admin/makeup/edit?id= $makeup->id \" class='btn btn-primary' role='button'>edit</a>
-                    <a href=\"http://localhost:8000/admin/makeup/delete?id= $makeup->id \" class='btn btn-primary' role='button'  onclick=\"return confirm(  ' All related to the category will be deleted \\n are you sure you want to delete the category ?   '  );\">delete</a>
+                    <a href=\"admin/makeup/edit?id= $makeup->id \" class='btn btn-primary' role='button'>edit</a>
+                    <a href=\"admin/makeup/delete?id= $makeup->id \" class='btn btn-primary' role='button'  onclick=\"return confirm(  ' All related to the category will be deleted \\n are you sure you want to delete the category ?   '  );\">delete</a>
                 </td>
             </tr>
                 ";
@@ -1173,15 +1173,15 @@ class adminController extends Controller
                 $source_name = DB::table('sources')->where('id',$item->source_id)->first()->name;
                 $html .= "
                 <tr>
-                <td><a href=\"http://localhost:8000/admin/source/makeup?id=$item->source_id\"  class='btn btn-primary' role='button'>$source_name</a></td>
+                <td><a href=\"admin/source/makeup?id=$item->source_id\"  class='btn btn-primary' role='button'>$source_name</a></td>
                 <td> $item->code</td>
                 
                 <td><a >$item->precentage %</a></td>
                 <td><a >$item->expiration</a></td>
     
                 <td>
-                    <a href=\"http://localhost:8000/admin/makeup/item/edit?id=$item->id&makeup_id=$request->id\" class='btn btn-primary' role='button'>edit</a>
-                    <a href=\"http://localhost:8000/admin/makeup/item/delete?id=$item->id&makeup_id=$request->id\" class='btn btn-primary' role='button' onclick=\"return confirm(  ' All related to the packet will be deleted \\n are you sure you want to delete the packet ?   '  );\">delete</a>
+                    <a href=\"admin/makeup/item/edit?id=$item->id&makeup_id=$request->id\" class='btn btn-primary' role='button'>edit</a>
+                    <a href=\"admin/makeup/item/delete?id=$item->id&makeup_id=$request->id\" class='btn btn-primary' role='button' onclick=\"return confirm(  ' All related to the packet will be deleted \\n are you sure you want to delete the packet ?   '  );\">delete</a>
                 </td>
             </tr>
                 ";
@@ -1296,8 +1296,8 @@ class adminController extends Controller
                 <td><a >$item->expiration</a></td>
     
                 <td>
-                    <a href=\"http://localhost:8000/admin/makeup/item/edit?id=$item->id&makeup_id=$category->id\" class='btn btn-primary' role='button'>edit</a>
-                    <a href=\"http://localhost:8000/admin/makeup/item/delete?id=$item->id&makeup_id=$category->id\" class='btn btn-primary' role='button' onclick=\"return confirm(  ' All related to the packet will be deleted \\n are you sure you want to delete the packet ?   '  );\">delete</a>
+                    <a href=\"admin/makeup/item/edit?id=$item->id&makeup_id=$category->id\" class='btn btn-primary' role='button'>edit</a>
+                    <a href=\"admin/makeup/item/delete?id=$item->id&makeup_id=$category->id\" class='btn btn-primary' role='button' onclick=\"return confirm(  ' All related to the packet will be deleted \\n are you sure you want to delete the packet ?   '  );\">delete</a>
                 </td>
             </tr>
                 ";
@@ -1326,7 +1326,7 @@ class adminController extends Controller
                 $html .= "
                     <tr>
                         <td><a>$bill->created_at</a></td>
-                        <td><a href=\"http://localhost:8000/admin/sells/items?id=$bill->id\" class='btn btn-primary' role='button'>$sellNo</a></td>
+                        <td><a href=\"admin/sells/items?id=$bill->id\" class='btn btn-primary' role='button'>$sellNo</a></td>
                         <td><a>$bill->total</a></td>
                     </tr>
                 ";
@@ -1398,7 +1398,7 @@ class adminController extends Controller
                 $html .="
                 
                     <div class='card col-lg-2 col-sm-4 col-xs-5' >
-                        <a target='_blank' rel='noopener noreferrer' href='http://localhost:8000/images/Bills/".$transaction->src."' >
+                        <a target='_blank' rel='noopener noreferrer' href='images/Bills/".$transaction->src."' >
                             <img class='card-img-top' alt='image not found'src=\"$src_path\">
                         </a>
                         <div clas='card-body'>
@@ -1430,7 +1430,7 @@ class adminController extends Controller
                 $html .="
                 
                     <div class='card col-lg-2 col-sm-4 col-xs-5' >
-                        <a target='_blank' rel='noopener noreferrer' href='http://localhost:8000/images/Bills/".$transaction->src."' >
+                        <a target='_blank' rel='noopener noreferrer' href='images/Bills/".$transaction->src."' >
                             <img class='card-img-top' alt='image not found'src=\"$src_path\">
                         </a>
                         <div clas='card-body'>
