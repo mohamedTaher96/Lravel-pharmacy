@@ -172,7 +172,7 @@ class adminController extends Controller
                     $html .= "
                     <tr>
                     <td> $medicine->name</td>
-                    <td><a href=\"admin/company/medicines/items?id=$request->id&medicine_id=$medicine->id\" class='btn btn-primary' role='button'> $packetNo </a></td>
+                    <td><a href=\"medicines/items?id=$request->id&medicine_id=$medicine->id\" class='btn btn-primary' role='button'> $packetNo </a></td>
                     <td><a>$medicine->material</a> </td>
                     <td><a>$medicine->cost</a></td>
                 </tr>
@@ -504,7 +504,7 @@ class adminController extends Controller
                     $html .= "
                     <tr>
                     <td> $medicine->name</td>
-                    <td><a href=\"admin/store/medicines/items?id=$request->id&medicine_id=$medicine->id\" class='btn btn-primary' role='button'> $packetNo </a></td>
+                    <td><a href=\"medicines/items?id=$request->id&medicine_id=$medicine->id\" class='btn btn-primary' role='button'> $packetNo </a></td>
                     <td><a>$medicine->material</a> </td>
                     <td><a>$medicine->cost</a></td>
                 </tr>
@@ -745,7 +745,7 @@ class adminController extends Controller
                 <tr>
                 <td>  $medicine->name </td>
                 <td><a href=\"admin/medicine/material?material= $medicine->material \"  class='btn btn-primary' role='button'> $medicine->material </a></td>
-                <td><a href=\"admin/medicine/items?id= $medicine->id \"  class='btn btn-primary' role='button'> $packetNo</a></td>
+                <td><a href=\"medicine/items?id= $medicine->id \"  class='btn btn-primary' role='button'> $packetNo</a></td>
                 <td><a> $medicine->stripe</a></td>
                 <td><a > $medicine->cost </a></td>
     
@@ -974,7 +974,7 @@ class adminController extends Controller
             $item->stripe = $medicineStripe;
     
             $item->save();
-            return redirect("admin/medicine/items?id=$request->id")->with(['add'=>'true']);
+            return redirect("medicine/items?id=$request->id")->with(['add'=>'true']);
         }else
         {
             return redirect('admin/login')->with(['access'=>'true']);
@@ -1001,7 +1001,7 @@ class adminController extends Controller
         if(isset($_SESSION['admin']))
         {
             DB::table('items')->where('id',$request->id)->update(['code'=>$request->code,'source_id'=>$request->source_id,'expiration'=>$request->expired,'precentage'=>$request->precentage]);
-            return redirect("admin/medicine/items?id=$request->medicine_id")->with(['edit'=>'true']);
+            return redirect("medicine/items?id=$request->medicine_id")->with(['edit'=>'true']);
         }else
         {
             return redirect('admin/login')->with(['access'=>'true']);
@@ -1015,7 +1015,7 @@ class adminController extends Controller
         {
             $item = DB::table('items')->where('id',$request->id);
             $item->delete();
-            return redirect("admin/medicine/items?id=$request->medicine_id")->with(['delete'=>'true']);
+            return redirect("medicine/items?id=$request->medicine_id")->with(['delete'=>'true']);
         }else
         {
             return redirect('admin/login')->with(['access'=>'true']);
