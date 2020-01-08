@@ -744,7 +744,7 @@ class adminController extends Controller
                 $html.="
                 <tr>
                 <td>  $medicine->name </td>
-                <td><a href=\"material?material= $medicine->material \"  class='btn btn-primary' role='button'> $medicine->material </a></td>
+                <td><a href=\"medicine/material?material= $medicine->material \"  class='btn btn-primary' role='button'> $medicine->material </a></td>
                 <td><a href=\"medicine/items?id= $medicine->id \"  class='btn btn-primary' role='button'> $packetNo</a></td>
                 <td><a> $medicine->stripe</a></td>
                 <td><a > $medicine->cost </a></td>
